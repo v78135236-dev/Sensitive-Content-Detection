@@ -6,9 +6,10 @@ from transformers import (
 )
 
 
-MODEL_PATH = (
-    "../models/sensitive_bert"
-)
+from pathlib import Path
+
+PROJECT_DIR = Path(__file__).resolve().parent
+MODEL_PATH = str(PROJECT_DIR / "models" / "sensitive_bert")
 
 
 DEVICE = torch.device(

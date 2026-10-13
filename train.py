@@ -19,9 +19,11 @@ from dataset import load_sensitive_dataset
 
 MODEL_NAME = "bert-base-uncased"
 
-OUTPUT_DIR = (
-    "../models/sensitive_bert"
-)
+
+from pathlib import Path
+
+PROJECT_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = str(PROJECT_DIR / "models" / "sensitive_bert")
 
 MAX_SAMPLES = 3000
 

@@ -15,14 +15,11 @@ from sklearn.metrics import (
 
 from dataset import load_sensitive_dataset
 
+from pathlib import Path
 
-MODEL_PATH = (
-    "../models/sensitive_bert"
-)
-
-RESULTS_DIR = (
-    "../results/sensitive"
-)
+PROJECT_DIR = Path(__file__).resolve().parent
+MODEL_PATH = str(PROJECT_DIR / "models" / "sensitive_bert")
+RESULTS_DIR = str(PROJECT_DIR / "results" / "sensitive")
 
 
 # =========================================================
